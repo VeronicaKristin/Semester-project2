@@ -4,8 +4,68 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="./src/output.css" rel="stylesheet" />
+		<script type="module" src="./utils/constants.js"></script>
+		<script type="module" src="./utils/header.js"></script>
+		<title>Auction home page</title>
 	</head>
 	<body>
-		<h1 class="text-3xl font-bold underline">Hello world!</h1>
+		<header class="bg-white shadow">
+			<div class="container flex items-center justify-between px-6 py-4 mx-auto">
+				<div class="text-3xl font-bold text-gray-800"><a href="#">Auction House</a></div>
+				<nav class="hidden space-x-6 lg:flex">
+					<a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+					<a id="open-login-modal" class="text-gray-800 hover:text-gray-600">Log in</a>
+					<a href="#" class="text-gray-800 hover:text-gray-600">Sign up</a>
+				</nav>
+				<div class="lg:hidden">
+					<button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<nav id="mobile-menu" class="hidden lg:hidden">
+				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+					<a href="#" class="block text-gray-800 hover:text-gray-600">Home</a>
+					<a id="open-login-modal" href="#" class="block text-gray-800 hover:text-gray-600">Log in</a>
+					<a href="#" class="block text-gray-800 hover:text-gray-600">Sign up</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div>
+				<h1>New listings</h1>
+			</div>
+		</main>
+		<div id="login-modal" class="fixed inset-0 flex items-center justify-center hidden bg-gray-800 bg-opacity-75">
+			<div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+				<h2 class="mb-4 text-2xl font-bold">Log in</h2>
+				<form>
+					<div class="mb-4">
+						<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+						<input
+							type="email"
+							id="email"
+							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+							required
+						/>
+					</div>
+					<div class="mb-4">
+						<label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+						<input
+							type="password"
+							id="password"
+							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+							required
+						/>
+					</div>
+					<div class="flex items-center justify-between">
+						<button type="submit" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">Log in</button>
+						<button type="button" id="close-login-modal" class="text-gray-500 hover:text-gray-700">Cancel</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
