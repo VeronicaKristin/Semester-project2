@@ -21,9 +21,27 @@ closeLoginModal.addEventListener("click", () => {
 	loginModal.classList.add("hidden");
 });
 
-// Close modal when clicking outside of it
+// Toggle sign-up modal visibility
+const signupModal = document.getElementById("signup-modal");
+const openSignupModalButtons = document.querySelectorAll("#open-signup-modal, #open-signup-modal-mobile");
+const closeSignupModal = document.getElementById("close-signup-modal");
+
+openSignupModalButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		signupModal.classList.remove("hidden");
+	});
+});
+
+closeSignupModal.addEventListener("click", () => {
+	signupModal.classList.add("hidden");
+});
+
+// Close modals when clicking outside of them
 window.addEventListener("click", (e) => {
 	if (e.target === loginModal) {
 		loginModal.classList.add("hidden");
+	}
+	if (e.target === signupModal) {
+		signupModal.classList.add("hidden");
 	}
 });

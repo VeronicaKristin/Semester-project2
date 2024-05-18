@@ -15,7 +15,7 @@
 				<nav class="hidden space-x-6 lg:flex">
 					<a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
 					<a id="open-login-modal" class="text-gray-800 hover:text-gray-600">Log in</a>
-					<a href="#" class="text-gray-800 hover:text-gray-600">Sign up</a>
+					<a id="open-signup-modal" class="text-gray-800 hover:text-gray-600">Sign up</a>
 				</nav>
 				<div class="lg:hidden">
 					<button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
@@ -29,15 +29,18 @@
 				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 					<a href="#" class="block text-gray-800 hover:text-gray-600">Home</a>
 					<a id="open-login-modal" href="#" class="block text-gray-800 hover:text-gray-600">Log in</a>
-					<a href="#" class="block text-gray-800 hover:text-gray-600">Sign up</a>
+					<a id="open-signup-modal" href="#" class="block text-gray-800 hover:text-gray-600">Sign up</a>
 				</div>
 			</nav>
 		</header>
 		<main>
-			<div>
-				<h1>New listings</h1>
-			</div>
+			<section>
+				<div class="text-center">
+					<h1>New listings</h1>
+				</div>
+			</section>
 		</main>
+		<!--modals for login and sign up -->
 		<div id="login-modal" class="fixed inset-0 flex items-center justify-center hidden bg-gray-800 bg-opacity-75">
 			<div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
 				<h2 class="mb-4 text-2xl font-bold">Log in</h2>
@@ -67,5 +70,49 @@
 				</form>
 			</div>
 		</div>
+		<div id="signup-modal" class="fixed inset-0 flex items-center justify-center hidden bg-gray-800 bg-opacity-75">
+			<div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+				<h2 class="mb-4 text-2xl font-bold">Sign up</h2>
+				<form>
+					<div class="mb-4">
+						<label for="signup-name" class="block text-sm font-medium text-gray-700">Name</label>
+						<input
+							type="Name"
+							id="signup-name"
+							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+							required
+						/>
+					</div>
+					<div class="mb-4">
+						<label for="signup-email" class="block text-sm font-medium text-gray-700">Email</label>
+						<input
+							type="email"
+							id="signup-email"
+							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+							required
+						/>
+					</div>
+					<div class="mb-4">
+						<label for="signup-password" class="block text-sm font-medium text-gray-700">Password</label>
+						<input
+							type="password"
+							id="signup-password"
+							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+							required
+						/>
+					</div>
+
+					<div class="flex items-center justify-between">
+						<button type="submit" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">Sign up</button>
+						<button type="button" id="close-signup-modal" class="text-gray-500 hover:text-gray-700">Cancel</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer class="text-white bg-gray-800">
+			<div class="pt-4 mt-8 text-center border-t border-gray-700">
+				<p class="text-gray-400">&copy; 2024 Auction House. All rights reserved.</p>
+			</div>
+		</footer>
 	</body>
 </html>
