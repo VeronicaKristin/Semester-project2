@@ -8,7 +8,7 @@
 		<script type="module" src="./utils/header.js"></script>
 		<title>Auction home page</title>
 	</head>
-	<body>
+	<body class="flex flex-col min-h-screen">
 		<header class="bg-white shadow">
 			<div class="container flex items-center justify-between px-6 py-4 mx-auto">
 				<div class="text-3xl font-bold text-gray-800"><a href="#">Auction House</a></div>
@@ -33,7 +33,7 @@
 				</div>
 			</nav>
 		</header>
-		<main>
+		<main class="flex-grow">
 			<section>
 				<div class="text-center">
 					<h1>New listings</h1>
@@ -77,7 +77,7 @@
 					<div class="mb-4">
 						<label for="signup-name" class="block text-sm font-medium text-gray-700">Name</label>
 						<input
-							type="Name"
+							type="name"
 							id="signup-name"
 							class="block w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50"
 							required
