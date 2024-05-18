@@ -1,4 +1,4 @@
-import { registerUser } from "../utils/registerUser.js";
+import { registerUser } from "../utils/registerUser.mjs";
 
 const registerForm = document.querySelector("#register-form");
 

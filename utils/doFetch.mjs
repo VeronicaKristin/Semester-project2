@@ -1,4 +1,4 @@
-import { getAuthToken } from "./handleAuth.js";
+import { getAuthToken } from "./handleAuth.mjs";
 
 export async function doFetch(url, isAuth = false, options = {}) {
 	try {

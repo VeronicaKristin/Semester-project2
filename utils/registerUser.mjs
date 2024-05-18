@@ -1,5 +1,5 @@
-import { REGISTER_URL } from "./constants.js";
-import { doFetch } from "./doFetch.js";
+import { REGISTER_URL } from "./constants.mjs";
+import { doFetch } from "./doFetch.mjs";
 
 export async function registerUser(name, email, password) {
 	console.log("Register user");

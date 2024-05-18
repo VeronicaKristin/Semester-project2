@@ -4,9 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="./src/output.css" rel="stylesheet" />
-		<script type="module" src="./utils/constants.js"></script>
+		<script type="module" src="./utils/constants.mjs"></script>
 		<script type="module" src="./js/header.js"></script>
-		<script type="module" src="./js/register.js"></script>
+		<script type="module" src="./js/register.mjs"></script>
+		<script type="module" src="./js/login.mjs"></script>
+		<script type="module" src="./js/listings.mjs"></script>
 		<title>Auction home page</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
@@ -38,6 +40,7 @@
 			<section>
 				<div class="text-center">
 					<h1>New listings</h1>
+					<div id="post-display-container" class="flex flex-wrap justify-center"></div>
 				</div>
 			</section>
 		</main>
