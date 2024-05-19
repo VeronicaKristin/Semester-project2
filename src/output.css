@@ -837,6 +837,22 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media (min-width: 768px) {
+  /* Adjust the breakpoint as needed */
+
+  #post-display-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust the number of columns as needed */
+    gap: 1rem;
+    /* Adjust the gap between grid items */
+  }
+
+  .max-w-xs {
+    max-width: none;
+  }
+}
+
 .hover\:bg-blue-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
