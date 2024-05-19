@@ -1,4 +1,4 @@
-import { registerUser } from "../utils/registerUser.mjs";
+/*import { registerUser } from "../utils/registerUser.mjs";
 
 const registerForm = document.querySelector("#register-form");
 
@@ -10,3 +10,4 @@ registerForm.addEventListener("submit", (event) => {
 	const password = event.target[2].value;
 	registerUser(name, email, password);
 });
+*/

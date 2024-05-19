@@ -20,7 +20,7 @@ async function doFetch(url, useCache) {
 const generateSinglePostHtml = (post) => {
 	const postContainer = document.createElement("div");
 	postContainer.classList.add("max-w-xs", "rounded", "overflow-hidden", "shadow-lg", "bg-white", "m-4", "border", "border-gray-300");
-	postContainer.classList.add("w-full", "md:w-1/3");
+	postContainer.classList.add("w-full", "md:w-1/3", "mb-4"); // Add mb-4 for margin-bottom
 
 	const postMedia = document.createElement("img");
 	// If there are media items, use the first one's URL; otherwise, use a placeholder

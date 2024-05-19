@@ -1,4 +1,4 @@
-import { loginUser } from "../utils/loginUser.mjs";
+/*import { loginUser } from "../utils/loginUser.mjs";
 
 const loginForm = document.querySelector("#login-modal");
 
@@ -10,3 +10,4 @@ loginForm.addEventListener("submit", (event) => {
 	const password = event.target[2].value;
 	loginUser(name, email, password);
 });
+*/

@@ -14,3 +14,8 @@
 		max-width: none;
 	}
 }
+
+#post-display-container {
+	padding: 20px; /* Adjust the padding to increase spacing */
+	margin: 0 auto; /* Center the content horizontally */
+}
