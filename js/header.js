@@ -6,6 +6,12 @@ menuButton.addEventListener("click", () => {
 	mobileMenu.classList.toggle("hidden");
 });
 
+// Function to clear text in forms
+function clearFormFields(formId) {
+	const form = document.getElementById(formId);
+	form.reset();
+}
+
 // Toggle login modal visibility
 const loginModal = document.getElementById("login-modal");
 const openLoginModalButtons = document.querySelectorAll("#open-login-modal, #open-login-modal-mobile");
@@ -19,6 +25,7 @@ openLoginModalButtons.forEach((button) => {
 
 closeLoginModal.addEventListener("click", () => {
 	loginModal.classList.add("hidden");
+	clearFormFields("login-form");
 });
 
 // Toggle sign-up modal visibility
@@ -34,6 +41,7 @@ openSignupModalButtons.forEach((button) => {
 
 closeSignupModal.addEventListener("click", () => {
 	signupModal.classList.add("hidden");
+	clearFormFields("signup-form");
 });
 
 // Close modals when clicking outside of them
@@ -61,6 +69,7 @@ openListingModalButtons.forEach((button) => {
 // Close modal
 closeListingModal.addEventListener("click", () => {
 	listingModal.classList.add("hidden");
+	clearFormFields("create-listing-form");
 });
 
 // Close modal when clicking outside of it
