@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 @media (min-width: 768px) {
-	/* Adjust the breakpoint as needed */
 	#post-display-container {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-		gap: 1rem; /* Adjust the gap between grid items */
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
 	}
 
 	.max-w-xs {
@@ -16,6 +15,6 @@
 }
 
 #post-display-container {
-	padding: 20px; /* Adjust the padding to increase spacing */
-	margin: 0 auto; /* Center the content horizontally */
+	padding: 20px 20px;
+	margin: 0 auto;
 }
