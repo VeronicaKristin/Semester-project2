@@ -16,7 +16,7 @@
 			<div class="container flex items-center justify-between px-6 py-4 mx-auto">
 				<div class="text-3xl font-bold text-gray-800"><a href="#">Auction House</a></div>
 				<nav class="hidden space-x-6 lg:flex">
-					<a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+					<a id="open-listing-modal" class="text-gray-800 hover:text-gray-600">Add listing</a>
 					<a id="open-login-modal" class="text-gray-800 hover:text-gray-600">Log in</a>
 					<a id="open-signup-modal" class="text-gray-800 hover:text-gray-600">Sign up</a>
 				</nav>
@@ -30,7 +30,7 @@
 			</div>
 			<nav id="mobile-menu" class="hidden lg:hidden">
 				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-					<a href="#" class="block text-gray-800 hover:text-gray-600">Home</a>
+					<a id="open-listing-modal" href="#" class="text-gray-800 hover:text-gray-600">Add listing</a>
 					<a id="open-login-modal" href="#" class="block text-gray-800 hover:text-gray-600">Log in</a>
 					<a id="open-signup-modal" href="#" class="block text-gray-800 hover:text-gray-600">Sign up</a>
 				</div>
@@ -44,7 +44,61 @@
 				</div>
 			</section>
 		</main>
-		<!--modals for login and sign up -->
+		<!--modals for add listing, login and sign up -->
+		<div id="listing-modal" class="fixed inset-0 items-center justify-center hidden bg-gray-900 bg-opacity-75">
+			<div class="w-full max-w-lg p-6 bg-white rounded-lg shadow-lg">
+				<span id="close-listing-modal" class="float-right text-gray-500 cursor-pointer close-btn hover:text-gray-900">&times;</span>
+				<h2 class="mb-4 text-2xl font-bold">Create a Listing</h2>
+				<form id="create-listing-form" class="space-y-4">
+					<div>
+						<label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
+						<input
+							type="text"
+							id="title"
+							name="title"
+							class="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
+						<textarea
+							id="description"
+							name="description"
+							class="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+							required
+						></textarea>
+					</div>
+
+					<div>
+						<label for="deadline" class="block text-sm font-medium text-gray-700">Deadline:</label>
+						<input
+							type="date"
+							id="deadline"
+							name="deadline"
+							class="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="media" class="block text-sm font-medium text-gray-700">Media URLs:</label>
+						<input
+							type="text"
+							id="media"
+							name="media"
+							class="block w-full mt-1 text-sm text-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+							placeholder="Enter media URLs "
+						/>
+					</div>
+
+					<div class="flex justify-end">
+						<button type="submit" class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<div id="login-modal" class="fixed inset-0 flex items-center justify-center hidden bg-gray-800 bg-opacity-75">
 			<div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
 				<h2 class="mb-4 text-2xl font-bold">Log in</h2>

@@ -45,3 +45,63 @@ window.addEventListener("click", (e) => {
 		signupModal.classList.add("hidden");
 	}
 });
+
+// Get modal elements
+const listingModal = document.getElementById("listing-modal");
+const openListingModalButtons = document.querySelectorAll("#open-listing-modal");
+const closeListingModal = document.getElementById("close-listing-modal");
+
+// Open modal
+openListingModalButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		listingModal.classList.remove("hidden");
+	});
+});
+
+// Close modal
+closeListingModal.addEventListener("click", () => {
+	listingModal.classList.add("hidden");
+});
+
+// Close modal when clicking outside of it
+window.addEventListener("click", (e) => {
+	if (e.target === listingModal) {
+		listingModal.classList.add("hidden");
+	}
+});
+
+// Form submission handling
+document.getElementById("create-listing-form").addEventListener("submit", async (e) => {
+	e.preventDefault();
+	const token = localStorage.getItem("token");
+	const title = document.getElementById("title").value;
+	const description = document.getElementById("description").value;
+	const deadline = document.getElementById("deadline").value;
+	const mediaURLs = document
+		.getElementById("media")
+		.value.split("\n")
+		.filter((url) => url.trim() !== ""); // Split URLs by newline and filter out empty URLs
+
+	const formData = new FormData();
+	formData.append("title", title);
+	formData.append("description", description);
+	formData.append("deadline", deadline);
+	for (const url of mediaURLs) {
+		formData.append("mediaURLs", url);
+	}
+
+	const response = await fetch("LISTINGS_URL", {
+		method: "POST",
+		headers: {
+			Authorization: `Bearer ${token}`,
+		},
+		body: formData,
+	});
+
+	const result = await response.json();
+	if (response.ok) {
+		window.location.href = "dashboard.html";
+	} else {
+		alert("Listing creation failed: " + result.message);
+	}
+});
